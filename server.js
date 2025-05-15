@@ -37,6 +37,9 @@ wss.on("connection", (ws, req) => {
   // URLからcallSidを取得
   const url = new URL(req.url, `http://${req.headers.host}`)
   const callSid = url.searchParams.get("callSid") || "unknown"
+  const userAgent = req.headers["user-agent"] || "unknown"
+
+  console.log(`✅ WS CONNECT callSid=${callSid}, userAgent=${userAgent}`)
 
   console.log(`WebSocket connection established for call: ${callSid}`)
 
