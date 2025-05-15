@@ -12,7 +12,7 @@ const app = express()
 // CORSを設定（Vercelデプロイのドメインを許可）
 app.use(
   cors({
-    origin: process.env.VERCEL_URL || "https://your-vercel-app.vercel.app",
+    origin: process.env.VERCEL_URL || "https://v0-twilio-ai-call-system.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true,
   }),
